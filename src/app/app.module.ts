@@ -7,11 +7,10 @@ import { RouterModule } from '@angular/router';
 import { AppRouting }     from './app.routing';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './layout/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent, FooterComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +22,6 @@ import { FooterComponent } from './layout/footer.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [FooterComponent]
+  exports: []
 })
 export class AppModule { }

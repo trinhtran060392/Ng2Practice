@@ -4,25 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { LayoutModule } from '../layout/layout.module';
-import { DashboardRouting } from './dashboard.routing';
-
-import { DashboardComponent } from './dashboard.component';
-
+import { LayoutComponent } from './layout.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    LayoutComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     HttpModule,
-    RouterModule,
-    LayoutModule,
-    DashboardRouting
+    RouterModule
   ],
-  exports: [ DashboardComponent]
+  exports: [ LayoutComponent]
 })
 
-export class DashboardModule {}
+export class LayoutModule {}
