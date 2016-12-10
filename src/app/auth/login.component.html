@@ -1,2 +1,38 @@
-<h3>This is login page</h3>
-<a routerLink="/dashboard" routerLinkActive="active">Back</a>
+
+<div class="login-page">
+  <div class="blue" id="blue-block"></div>
+  <div class="login-content" id="login-content">
+    <div class="logo" id="logo">
+      <img src="/assets/images/logo.png" alt="logo" />
+    </div>
+    <div class="login-form">
+      <div class="login-form-title">Welcome back!</div>
+      <div class="login-form-error"></div>
+      <form name="login_form">
+        <div class="group">
+          <label>Your Email</label>
+          <input class="form-control" type="email" name="login" ng-model="email" id="email" required />
+        </div>
+        <div class="group">
+          <label>Your Password</label>
+          <input class="form-control" type="password" name="password" ng-model="password" id="password" required />
+        </div>
+        <div class="group">
+          <a class="btn btn-primary" routerLink="/dashboard" routerLinkActive="active">Log In</a>
+        </div>
+        <div class="forgot-password" ng-controller="ModalController as modal">
+          <a href="#" ng-click="modal.open('', 'app/parts/forgot-password-form.html')">Forgot Password</a>
+        </div>
+      </form>
+    </div>
+    <div class="static-page-links" id="static-page-links">
+      <ul>
+        <li><a href="/docs">Docs</a></li>
+        <li>|</li>
+        <li><a href="/faq">FAQs</a></li>
+        <li>|</li>
+        <li><a href="/about">About us</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
