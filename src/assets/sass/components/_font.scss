@@ -1,3 +1,6 @@
 .fa {
 	color: $blue;
+	&.right {
+		margin-left: 10px;
+	}
 }

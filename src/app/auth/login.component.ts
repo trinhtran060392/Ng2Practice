@@ -11,6 +11,10 @@ export class LoginComponent {
 
 	user: User = {
 	  email: '',
-	  password: 'Windstorm'
+	  password: ''
 	};
+
+	login() {
+    console.log(this.user);
+  }
 }
