@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from './user';
 
@@ -9,6 +10,8 @@ import { User } from './user';
 
 export class LoginComponent {
 
+  constructor(private router : Router) {}
+
 	user: User = {
 	  email: '',
 	  password: ''
@@ -16,5 +19,6 @@ export class LoginComponent {
 
 	login() {
     console.log(this.user);
+    this.router.navigate(['/dashboard']);
   }
 }

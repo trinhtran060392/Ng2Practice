@@ -19,7 +19,7 @@
             />
         </div>
         <div class="group">
-          <a class="btn btn-primary" (click)="login()">Log In<i class="fa fa-sign-in right" aria-hidden="true"></i></a>
+          <a class="btn btn-primary"  [ngClass]="{'disabled' : !userForm.valid}" (click)="login()">Log In<i class="fa fa-sign-in right" aria-hidden="true"></i></a>
         </div>
         <div class="forgot-password" ng-controller="ModalController as modal">
           <a href="#" ng-click="modal.open('', 'app/parts/forgot-password-form.html')">Forgot Password</a>
