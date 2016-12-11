@@ -66,4 +66,10 @@ html body * {
   margin: 0 auto 0;
 }
 
+@import 'assets/sass/abstracts/override-bootstrap-variables';
 @import 'assets/sass/components/flex';
+
+
+.large-text {
+  font-size: $font-size-h3;
+}
