@@ -57,6 +57,9 @@ $fSizeSmall   : 14px;
           color: $blackGrey;
           font-size: $fSizeSmall;
           border: none;
+          &.has-error {
+            border: 1px solid red;
+          }
         }
 
         button {
