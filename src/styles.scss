@@ -2,7 +2,10 @@
 .blue-text {
 	color: blue;
 }
-
+@font-face {
+  font-family: 'skyrec';
+  src: url('assets/fonts/ufonts.com_hirakakupro-w3-opentype.otf');
+}
 /* Mixins */
 @mixin animate() {
   transition: cubic-bezier(.25,.8,.25,1) .25s;
@@ -51,14 +54,9 @@ $fSizeSmall   : 14px;
 html, body {
   min-width: 960px;
   background: $grey;
-}
-html body * {
-  border-sizing: border-box;
   font-family: 'skyrec', 'sans serif', 'open sans';
-  font-size: $fSizeDefault;
-  color: $black;
-  max-height: 999999px;
 }
+
 .container {
   min-width: 960px;
   max-width: 960px;
