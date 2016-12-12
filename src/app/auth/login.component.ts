@@ -1,24 +1,30 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthenticationService } from './auth.service'
 import { User } from './user';
 
 @Component({
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [AuthenticationService]
 })
 
 export class LoginComponent {
 
-  constructor(private router : Router) {
+  constructor(private router : Router, private service: AuthenticationService) {
+    console.log(1);
   }
 
+  ngOnInit() {
+    this.service.checkCredentials();
+  }
 	user: User = {
 	  email: '',
 	  password: ''
 	};
 
 	login() {
-    this.router.navigate(['/dashboard']);
+    if (!this.service.login(this.user)) {
+    } else this.router.navigate(['/dashboard']);
   }
 }
