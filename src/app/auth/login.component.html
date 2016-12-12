@@ -10,7 +10,11 @@
       <form name="login_form" #userForm="ngForm" >
         <div class="group">
           <label>Your Email</label>
-          <input class="form-control" type="email" name="email" id="email" required [(ngModel)]="user.email" #email="ngModel" [ngClass]="{'has-error' : email.touched && !email.valid}" />
+          <input class="form-control" type="email" name="email" id="email" required [(ngModel)]="user.email"  
+            #email="ngModel"
+            ngControl="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+            [ngClass]="{'has-error' : email.touched && !email.valid}"/>
         </div>
         <div class="group">
           <label>Your Password</label>
