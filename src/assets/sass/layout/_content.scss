@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'skyrec';
+  src: url('assets/fonts/ufonts.com_hirakakupro-w3-opentype.otf');
+}
+
+
+/* Defaults */
+html, body {
+  min-width: 960px;
+  background: $grey;
+}
+
+html body * {
+  border-sizing: border-box;
+  font-family: 'skyrec', 'sans serif', 'open sans';
+  font-size: $fSizeDefault;
+  color: $black;
+  max-height: 999999px;
+}
+
+.container {
+  min-width: 960px;
+  max-width: 960px;
+  width: 960px;
+  margin: 0 auto 0;
+}

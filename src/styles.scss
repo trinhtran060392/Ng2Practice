@@ -1,71 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-.blue-text {
-	color: blue;
-}
-@font-face {
-  font-family: 'skyrec';
-  src: url('assets/fonts/ufonts.com_hirakakupro-w3-opentype.otf');
-}
-/* Mixins */
-@mixin animate() {
-  transition: cubic-bezier(.25,.8,.25,1) .25s;
-  transition-property: background;
-}
-@mixin hoverAnimate($background) {
-  transition: cubic-bezier(.25,.8,.25,1) .25s;
-  transition-property: background;
-  background: $background;
-}
-
-/* Scroll-Bar */
-::-webkit-scrollbar {
-  width: 5px;
-  background: rgba(36,159,219,0.1);
-}
-::-webkit-scrollbar-track {
-  background: rgba(36,159,219,0.3);
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(36,159,219,0.5);
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-  -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(36,159,219,0.5);
-}
 
 /* Var */
 @import 'assets/sass/abstracts/variables';
+@import 'assets/sass/abstracts/mixins';
+
+@import 'assets/sass/base/colors';
 
 @import 'assets/sass/abstracts/override-bootstrap-variables';
+
+@import 'assets/sass/layout/content';
+
 @import 'assets/sass/components/flex';
 @import 'assets/sass/components/font';
+@import 'assets/sass/components/scrollbar';
 
-/* Defaults */
-html, body {
-  min-width: 960px;
-  background: $grey;
-}
-
-html body * {
-  border-sizing: border-box;
-  font-family: 'skyrec', 'sans serif', 'open sans';
-  font-size: $fSizeDefault;
-  color: $black;
-  max-height: 999999px;
-}
-
-.container {
-  min-width: 960px;
-  max-width: 960px;
-  width: 960px;
-  margin: 0 auto 0;
-}
-
-.large-text {
-  font-size: $font-size-h3;
-}
+@import 'assets/sass/abstracts/shame';
