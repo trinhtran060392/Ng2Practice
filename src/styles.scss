@@ -39,22 +39,24 @@
 }
 
 /* Var */
-$grey       : #F4F8F9;
-$darkGrey   : #ECEFF1;
-$blackGrey  : #A5A5A5;
-$black      : #333333;
-$lightBlack : #555555;
-$white      : #FFFFFF;
-$blue       : #249EDB;
+@import 'assets/sass/abstracts/variables';
 
-$fSizeDefault : 16px;
-$fSizeSmall   : 14px;
+@import 'assets/sass/abstracts/override-bootstrap-variables';
+@import 'assets/sass/components/flex';
+@import 'assets/sass/components/font';
 
 /* Defaults */
 html, body {
   min-width: 960px;
   background: $grey;
+}
+
+html body * {
+  border-sizing: border-box;
   font-family: 'skyrec', 'sans serif', 'open sans';
+  font-size: $fSizeDefault;
+  color: $black;
+  max-height: 999999px;
 }
 
 .container {
@@ -63,11 +65,6 @@ html, body {
   width: 960px;
   margin: 0 auto 0;
 }
-
-@import 'assets/sass/abstracts/override-bootstrap-variables';
-@import 'assets/sass/components/flex';
-@import 'assets/sass/components/font';
-
 
 .large-text {
   font-size: $font-size-h3;

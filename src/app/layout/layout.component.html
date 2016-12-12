@@ -1,5 +1,36 @@
 <div class="header">
-	<div class="text">This is header</div>
+	<div class="navigation">
+    <div class="container navigation-container">
+      <div class="flex flex-content-between flex-align-items-center">
+        <div>
+          <div class="navigation-container-nav-side flex flex-content-start flex-align-items-center">
+            <div>
+              <a href="/">
+                <img src="/assets/images/logo-demo.png" alt="logo" />
+              </a>
+            </div>
+            <div>
+              <a href="/docs">Docs</a>
+            </div>
+            <div>
+              |
+            </div>
+            <div>
+              <a href="/faq">FAQs</a>
+            </div>
+            <div>
+              |
+            </div>
+            <div>
+              <a href="/about">About us</a>
+            </div>
+          </div>
+        </div>
+        <div class="navigation-container-signout-button">
+          <a href="#" [routerLink]="['/login']">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>
-<div class="footer blue-text">This is footer</div>
