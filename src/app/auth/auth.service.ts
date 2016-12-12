@@ -39,4 +39,8 @@ export class AuthenticationService {
       this._router.navigate(['/']);
     }
   } 
+  isAuthenticated() {
+    if (localStorage.getItem("user")) return true;
+    else return false;
+  }
 }

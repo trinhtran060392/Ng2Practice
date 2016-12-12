@@ -12,12 +12,14 @@ import { User } from './user';
 export class LoginComponent {
 
   constructor(private router : Router, private service: AuthenticationService) {
-    console.log(1);
   }
 
   ngOnInit() {
     this.service.checkCredentials();
   }
+
+  checkCredentials = this.service.isAuthenticated();
+
 	user: User = {
 	  email: '',
 	  password: ''
