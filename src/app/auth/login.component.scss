@@ -12,6 +12,7 @@ $fSizeSmall   : 14px;
 .blue {
   background: $blue;
   width: 100%;
+  height: 330px;
 }
 
 .login-content {
@@ -26,6 +27,7 @@ $fSizeSmall   : 14px;
 
   .logo {
     text-align: center;
+    margin-top: 110px;
   }
 
   .login-form {
@@ -62,7 +64,7 @@ $fSizeSmall   : 14px;
           }
         }
 
-        button {
+        .btn {
           width: 100%;
           display: block;
           background-color: $blue;
