@@ -7,8 +7,7 @@ import { FaqComponent } from './static/faq.component';
 import { AboutComponent } from './static/about.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'login', loadChildren: 'app/auth/auth.module#AuthModule' },
+  { path: '', loadChildren: 'app/auth/auth.module#AuthModule' },
   { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
   { path: 'docs', component: LayoutComponent, children: [
     {

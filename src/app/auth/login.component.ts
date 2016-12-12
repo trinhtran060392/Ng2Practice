@@ -10,7 +10,8 @@ import { User } from './user';
 
 export class LoginComponent {
 
-  constructor(private router : Router) {}
+  constructor(private router : Router) {
+  }
 
 	user: User = {
 	  email: '',
@@ -18,7 +19,6 @@ export class LoginComponent {
 	};
 
 	login() {
-    console.log(this.user);
     this.router.navigate(['/dashboard']);
   }
 }
