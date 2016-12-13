@@ -13,6 +13,7 @@ export class LayoutComponent {
 
   constructor(private service: AuthenticationService) {
   }
+  
   logout() {
     this.service.logout();
   }

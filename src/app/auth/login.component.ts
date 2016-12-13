@@ -12,7 +12,6 @@ import { User } from './user';
 export class LoginComponent {
 
   constructor(private router : Router, private service: AuthenticationService) {
-    console.log(this.checkCredentials);
   }
 
   formError : boolean = false;
@@ -29,8 +28,11 @@ export class LoginComponent {
 	};
 
 	login() {
-    if (!this.service.login(this.user)) {
-      this.formError = true;
-    } else this.router.navigate(['/dashboard']);
+    this.service.login(this.user).subscribe(res => {
+      if (res.status === 201) {
+        this.service.setCookie(res.json().token.token);
+        this.router.navigate(["/dashboard"]);
+      } else this.formError = true;
+    });
   }
 }
