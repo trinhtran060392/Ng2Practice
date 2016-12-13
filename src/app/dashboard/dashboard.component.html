@@ -1,1 +1,46 @@
-<p class="large-text">This is dashboard page</p>
+<div class="page-dashboard">
+  <div class="dashboard-container flex flex-content-between flex-align-items-center">
+    <div>
+      <div class="block">
+        <div class="block-logo">
+          <img src="/assets/images/icon-template.png" alt="ico" />
+        </div>
+        <div class="block-title">Template</div>
+        <div class="block-quantity">
+          <div>3/20</div>
+        </div>
+        <div class="block-buttons">
+          <button ng-if="dashboard.role === 'admin'" class="btn btn-primary">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;Create
+          </button>
+          <button class="btn btn-default">
+            View&nbsp;
+            <i class="glyphicon glyphicon-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block">
+        <div class="block-logo">
+          <img src="/assets/images/icon-asset.png" alt="ico" />
+        </div>
+        <div class="block-title">Images</div>
+        <div class="block-quantity">
+          <div>3</div>
+        </div>
+        <div class="block-buttons">
+          <button class="btn btn-primary">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;Upload
+          </button>
+          <button class="btn btn-default">
+            View&nbsp;
+            <i class="glyphicon glyphicon-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

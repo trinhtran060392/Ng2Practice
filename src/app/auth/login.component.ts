@@ -12,6 +12,7 @@ import { User } from './user';
 export class LoginComponent {
 
   constructor(private router : Router, private service: AuthenticationService) {
+    console.log(this.checkCredentials);
   }
 
   formError : boolean = false;
