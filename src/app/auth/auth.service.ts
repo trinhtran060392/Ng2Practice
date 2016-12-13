@@ -33,9 +33,7 @@ export class AuthenticationService {
   }
 
    checkCredentials( ){
-    if (localStorage.getItem("user")){
-      this._router.navigate(['/dashboard']);
-    } else {
+    if (!localStorage.getItem("user")){
       this._router.navigate(['/']);
     }
   } 

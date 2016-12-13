@@ -14,11 +14,11 @@
             #email="ngModel"
             ngControl="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
-            [ngClass]="{'has-error' : email.touched && !email.valid}"/>
+            [ngClass]="{'has-error' : (email.touched && !email.valid) || formError}"/>
         </div>
         <div class="group">
           <label>Your Password</label>
-          <input class="form-control" type="password" name="password" [(ngModel)]="user.password" id="password" required #password="ngModel" [ngClass]="{'has-error' : password.touched && !password.valid}"
+          <input class="form-control" type="password" name="password" [(ngModel)]="user.password" id="password" required #password="ngModel" [ngClass]="{'has-error' : (password.touched && !password.valid) || formError}"
             />
         </div>
         <div class="group">

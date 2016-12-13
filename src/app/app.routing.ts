@@ -5,6 +5,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { DocsComponent } from './static/docs.component';
 import { FaqComponent } from './static/faq.component';
 import { AboutComponent } from './static/about.component';
+import { PageNotFoundComponent } from './static/pagenotfound.component';
 
 const routes: Routes = [
   { path: '', loadChildren: 'app/auth/auth.module#AuthModule' },
@@ -26,7 +27,8 @@ const routes: Routes = [
       path: '',
       component: AboutComponent
     }
-  ]}
+  ]},
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

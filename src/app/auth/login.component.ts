@@ -14,6 +14,8 @@ export class LoginComponent {
   constructor(private router : Router, private service: AuthenticationService) {
   }
 
+  formError : boolean = false;
+
   ngOnInit() {
     this.service.checkCredentials();
   }
@@ -27,6 +29,7 @@ export class LoginComponent {
 
 	login() {
     if (!this.service.login(this.user)) {
+      this.formError = true;
     } else this.router.navigate(['/dashboard']);
   }
 }

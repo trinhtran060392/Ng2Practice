@@ -10,10 +10,4 @@ import { AuthenticationService } from './auth/auth.service'
 })
 export class AppComponent {
   title = 'app works!';
-
-  constructor(private service : AuthenticationService) {}
-
-  ngOnInit() {
-    this.service.checkCredentials();
-  }
 }

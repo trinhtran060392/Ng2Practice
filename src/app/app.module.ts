@@ -10,10 +10,11 @@ import { AppComponent } from './app.component';
 import { DocsComponent } from './static/docs.component';
 import { FaqComponent } from './static/faq.component';
 import { AboutComponent } from './static/about.component';
+import { PageNotFoundComponent } from './static/pagenotfound.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DocsComponent, FaqComponent, AboutComponent
+    AppComponent, DocsComponent, FaqComponent, AboutComponent, PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
