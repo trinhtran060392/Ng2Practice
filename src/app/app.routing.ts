@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './static/pagenotfound.component';
 const routes: Routes = [
   { path: '', loadChildren: 'app/auth/auth.module#AuthModule' },
   { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+  { path: 'projects', loadChildren: 'app/projects/projects.module#ProjectsModule' },
   { path: 'docs', component: LayoutComponent, children: [
     {
       path: '',

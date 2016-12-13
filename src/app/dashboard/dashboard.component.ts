@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../auth/auth.service';
 
@@ -9,11 +11,15 @@ import { AuthenticationService } from '../auth/auth.service';
 
 export class DashboardComponent {
 
-  constructor(private service : AuthenticationService) {
+  constructor(private router : Router, private service : AuthenticationService) {
 
   }
 
   ngOnInit() {
     this.service.checkCredentials();
+  }
+
+  viewProjects() {
+    this.router.navigate(["/projects"]);
   }
 }
