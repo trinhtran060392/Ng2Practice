@@ -24,8 +24,8 @@
         <div class="group">
           <a class="btn btn-primary"  [ngClass]="{'disabled' : !userForm.valid}" (click)="login()">Log In<i class="fa fa-sign-in right" aria-hidden="true"></i></a>
         </div>
-        <div class="forgot-password" ng-controller="ModalController as modal">
-          <a href="#" ng-click="modal.open('', 'app/parts/forgot-password-form.html')">Forgot Password</a>
+        <div class="forgot-password">
+          <a href="#" data-toggle="modal" data-target="#forgot-pass">Forgot Password</a>
         </div>
       </form>
     </div>
@@ -39,4 +39,30 @@
       </ul>
     </div>
   </div>
+  <!-- Modal -->
+  <div id="forgot-pass" class="modal fade forgot-password-form" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Forgot your password</h4>
+        </div>
+        <div class="modal-body">
+          <div class="forgot-password-notice">Enter your email blow to receive youy password reset instructions</div>
+          <form>
+            <div class="group form-group">
+              <label>Your Email</label>
+              <input type="email" name="email" ng-model="email" class="form-control" id="forgot-password-email" required />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-forgot-pass btn btn-primary" ng-click="pass.forgotPassword()">Send Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -5,9 +5,22 @@ $black      : #333333;
 $lightBlack : #555555;
 $white      : #FFFFFF;
 $blue       : #249EDB;
+$biggest2  : 24px;
+$middle    : 14px;
 
 $fSizeDefault : 16px;
 $fSizeSmall   : 14px;
+$veryBig   : 50px;
+$middleBig : 43px;
+$middleBig2: 30px;
+$biggest   : 25px;
+$biggest2  : 24px;
+$big       : 20px;
+$default   : 16px;
+$default2  : 15px;
+$middle    : 14px;
+$small     : 12px;
+$verySmall : 10px;
 
 .blue {
   background: $blue;
@@ -129,6 +142,61 @@ $fSizeSmall   : 14px;
       a {
         font-size: $fSizeSmall;
         color: $black;
+      }
+    }
+  }
+}
+.forgot-password-form {
+  .modal-dialog {
+    max-width: 460px;
+  }
+  .modal-content {
+
+    border-radius: 0;
+  }
+  .forgot-password-title {
+    font-size: $biggest2;
+    text-align: center;
+    color: $black;
+  }
+
+  .forgot-password-notice {
+    font-size: $middle;
+    line-height: 1.57;
+    text-align: center;
+    color: $lightBlack;
+    width: 350px;
+    margin: $big auto 0;
+  }
+
+  form {
+    display: block;
+    width: 350px;
+    margin: 0 auto 0;
+
+    label {
+      text-align: left;
+      font-size: $small;
+      color: $blackGrey;
+    }
+
+    .group {
+      margin: $middleBig2 0 0;
+
+      input {
+        padding: $biggest $small $biggest;
+        background-color: $darkGrey;
+        color: $blackGrey;
+        font-size: $small;
+        border: none;
+      }
+
+      button.btn-primary {
+        width: 100%;
+        display: block;
+        background-color: $blue;
+        border: none;
+        padding: $default2 0 $default2;
       }
     }
   }
