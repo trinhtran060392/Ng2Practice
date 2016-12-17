@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { MdCheckbox } from "@angular/material";
-import { ProjectsService } from '../projects/projects.service';
+import { TemplateService } from './template.service';
 import { AuthenticationService } from '../auth/auth.service';
 
 @Component({
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  providers: [ProjectsService, AuthenticationService]
+  templateUrl: './template.component.html',
+  styleUrls: ['./template.component.scss'],
+  providers: [TemplateService, AuthenticationService]
 })
 
-export class ProjectsComponent {
+export class TemplateComponent {
 
-  constructor(private service : ProjectsService, private authService : AuthenticationService) {
+  constructor(private service : TemplateService, private authService : AuthenticationService) {
 
   }
   projects: any[];

@@ -6,14 +6,14 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 
 import { LayoutModule } from '../layout/layout.module';
-import { ProjectsRouting } from './projects.routing';
+import { TemplateRouting } from './template.routing';
 
-import { ProjectsComponent } from './projects.component';
+import { TemplateComponent } from './template.component';
 
 
 @NgModule({
   declarations: [
-    ProjectsComponent
+    TemplateComponent
   ],
   imports: [
     CommonModule,
@@ -22,9 +22,9 @@ import { ProjectsComponent } from './projects.component';
     RouterModule,
     MaterialModule,
     LayoutModule,
-    ProjectsRouting
+    TemplateRouting
   ],
-  exports: [ ProjectsComponent]
+  exports: [ TemplateComponent]
 })
 
-export class ProjectsModule {}
+export class TemplateModule {}

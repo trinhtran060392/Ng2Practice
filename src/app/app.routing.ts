@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './static/pagenotfound.component';
 const routes: Routes = [
   { path: '', loadChildren: 'app/auth/auth.module#AuthModule' },
   { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
-  { path: 'projects', loadChildren: 'app/projects/projects.module#ProjectsModule' },
+  { path: 'templates', loadChildren: 'app/template/template.module#TemplateModule' },
   { path: 'images', loadChildren: 'app/image/image.module#ImageModule' },
   { path: 'docs', component: LayoutComponent, children: [
     {

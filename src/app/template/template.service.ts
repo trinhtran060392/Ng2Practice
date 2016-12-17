@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class ProjectsService {
+export class TemplateService {
 
   constructor(private _router: Router, private http: Http, private location : Location){}
 
