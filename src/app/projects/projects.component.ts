@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MdCheckbox } from "@angular/material";
 import { ProjectsService } from '../projects/projects.service';
 import { AuthenticationService } from '../auth/auth.service';
 
@@ -15,9 +16,9 @@ export class ProjectsComponent {
   }
   projects: any[];
   ngOnInit() {
-    this.authService.checkCredentials();
-    this.service.getProjects(localStorage.getItem("user")).subscribe(res => {
-      console.log(res);
-    });
+    //this.authService.checkCredentials();
+    //this.service.getProjects(localStorage.getItem("user")).subscribe(res => {
+      //console.log(res);
+    //});
   }
 }

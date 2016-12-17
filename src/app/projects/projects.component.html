@@ -1,1 +1,109 @@
-<h3>Project</h3>
+<div class="container page-templates">
+  <div class="flex flex-content-start flex-align-items-center">
+    <div>
+      <div class="page-templates-title">
+        Template
+      </div>
+    </div>
+    <div>
+      <div class="page-templates-count">
+        3 / 20
+      </div>
+     
+    </div>
+  </div>
+  <div class="page-templates-buttons flex flex-content-between flex-align-items-end">
+    <div>
+      <div class="page-templates-buttons flex flex-content-start flex-align-items-start">
+        <div>
+          <button type="button" class="btn btn-primary" ng-click="templates.newTemplate()">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;New Template
+          </button>
+        </div>
+        <div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" uib-btn="'left'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/templates/dublicate-template/dublicate-template.html')">
+              <i class="glyphicon glyphicon-book"></i>
+            &nbsp;Dublicate
+            </button>
+            <button type="button" class="btn btn-default" uib-btn="'right'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/templates/delete-template/delete-template.html')">
+              <i class="glyphicon glyphicon-trash"></i>
+            &nbsp;Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-default">
+        <i class="glyphicon glyphicon-plus"></i>
+        &nbsp;Create Task
+      </button>
+    </div>
+  </div>
+  <div class="page-templates-list">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+                           <md-checkbox
+                >
+     dd
+                </md-checkbox>
+            </th>
+            <th>
+              <a href="#">
+                Name&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Output Type&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Create Date&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <md-checkbox
+                >
+     dd
+                </md-checkbox>
+            </td>
+            <td>
+              <a href="">Name</a>
+            </td>
+            <td>
+              CSV
+            </td>
+           
+            <td>
+              <div class="user-role flex flex-content-between flex-align-items-center">
+                <div>
+                  20/11
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    &nbsp;Create Task
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

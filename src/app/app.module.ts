@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
+
 import { LayoutModule } from './layout/layout.module';
 
 import { AppRouting }     from './app.routing';
@@ -20,6 +22,7 @@ import { PageNotFoundComponent } from './static/pagenotfound.component';
     BrowserModule,
     HttpModule,
     RouterModule,
+    MaterialModule.forRoot(),
     LayoutModule,
 
     AppRouting

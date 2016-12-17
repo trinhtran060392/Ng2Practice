@@ -16,7 +16,7 @@ export class DashboardComponent {
   }
 
   ngOnInit() {
-    this.service.checkCredentials();
+    //this.service.checkCredentials();
   }
 
   viewProjects() {

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
 
 import { LayoutModule } from '../layout/layout.module';
 import { ProjectsRouting } from './projects.routing';
@@ -19,6 +20,7 @@ import { ProjectsComponent } from './projects.component';
     FormsModule,
     HttpModule,
     RouterModule,
+    MaterialModule,
     LayoutModule,
     ProjectsRouting
   ],
