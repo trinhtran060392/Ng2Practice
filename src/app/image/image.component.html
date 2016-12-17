@@ -1,0 +1,111 @@
+<div class="container page-images">
+  <div class="flex flex-content-start flex-align-items-center">
+    <div>
+      <div class="page-images-title">
+        Images Asset
+      </div>
+    </div>
+    <div>
+      <div class="page-images-count">
+        22
+      </div>
+    </div>
+  </div>
+  <div class="page-images-buttons flex flex-content-between flex-align-items-end">
+    <div>
+      <div class="page-images-buttons flex flex-content-start flex-align-items-start">
+        <div ng-controller="ModalController as modal">
+          <button type="button" class="btn btn-primary" ng-click="modal.open('', 'app/images/image-upload/image-upload.html')">
+            <i class="glyphicon glyphicon-arrow-up"></i>
+            &nbsp;Upload
+          </button>
+        </div>
+        <div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" uib-btn="'left'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/task/create-task/create-task.html')">
+              <i class="glyphicon glyphicon-plus"></i>
+              &nbsp;Create Task
+            </button>
+            <button type="button" class="btn btn-default" uib-btn="'right'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/images/delete-image/delete-image.html')">
+              <i class="glyphicon glyphicon-trash"></i>
+              &nbsp;Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-default" ng-click="images.goHome()">
+        Done
+      </button>
+    </div>
+  </div>
+  <div class="page-images-list">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              <md-checkbox></md-checkbox>
+            </th>
+            <th>
+              <a href="#">
+                Name&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Upload Date&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Number&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Size&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Task&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="image in images.images">
+            <td>
+              <md-checkbox></md-checkbox>
+            </td>
+            <td>
+              <a href="/tasks/{{ image.id }}">Name</a>
+            </td>
+            <td>
+              22
+            </td>
+            <td>
+              2
+            </td>
+            <td>
+              2
+            </td>
+            <td>
+              <div class="flex flex-content-between flex-align-items-start">
+                <div ng-if="image.task.progressing > 0" class="progressing">2 Progressing</div>
+                <div ng-if="image.task.done > 0" class="done">2 Done</div>
+                <div ng-if="image.task.quene > 0" class="quene">2 Quene</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

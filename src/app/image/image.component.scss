@@ -1,0 +1,138 @@
+$greyBorder : #9AABB3;
+$greyBorder2: #DFDFDF;
+$orange     : #ff7d2e;
+$green      : #2cc557;
+$pseudoBlack: #5d5d5d;
+
+$fSizeDefault : 16px;
+$fSizeSmall   : 14px;
+$veryBig   : 50px;
+$middleBig : 43px;
+$middleBig2: 30px;
+$biggest   : 25px;
+$biggest2  : 24px;
+$big       : 20px;
+$default   : 16px;
+$default2  : 15px;
+$middle    : 14px;
+$small     : 12px;
+$verySmall : 10px;
+$white      : #FFFFFF;
+$blue       : #249EDB;
+$black      : #333333;
+
+.page-images {
+  padding-top: $middleBig;
+
+  div.page-images-title {
+    font-size: $biggest2;
+    color: $black;
+  }
+
+  div.page-images-count {
+    background: $blue;
+    color: $white;
+    font-size: $default;
+    text-align: center;
+    padding: 5px $small 6px;
+    border-radius: $default;
+    margin-left: 11px;
+  }
+
+  div.progressing, div.done, div.quene {
+    color: $white;
+    font-size: $small;
+    text-align: center;
+    padding: 5px $small 6px;
+    border-radius: $default;
+  }
+  div.progressing { background: $orange; }
+  div.done        { background: $green; }
+  div.quene       { background: $pseudoBlack; }
+
+  div.page-images-buttons {
+    margin-top: 37px;
+
+    button.btn-primary {
+      background: $blue;
+      border: none;
+      margin-right: 32px;
+
+      i {
+        color: $white;
+      }
+    }
+  }
+
+  div.page-images-list {
+    margin-top: $big;
+    border: thin solid $greyBorder2;
+
+    table {
+      margin-bottom: 0;
+    }
+    table tr, table th, table td {
+      padding: 0;
+    }
+    table thead tr {
+      background: $greyBorder2;
+    }
+    table thead tr th, table tbody tr td {
+      border-bottom: thin solid $greyBorder2;
+      font-size: $small;
+      padding: $default2;
+    }
+    table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    table thead tr th a {
+      cursor: pointer;
+      font-size: $small;
+
+      i {
+        font-size: $small;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    table tbody tr td a {
+      color: $blue;
+      font-size: $small;
+    }
+
+    span.glyphicon-ok {
+      width: auto;
+      left: 0;
+      font-size: $small;
+      color: $white;
+    }
+    button.btn-default {
+      &:hover {
+        background: $white;
+        border-color: $greyBorder;
+      }
+
+      &:active, &:focus, &:visited {
+        background: $white;
+        outline: none;
+        border-color: $greyBorder;
+      }
+    }
+    button.checked {
+      background: $blue;
+
+      &:hover {
+        background: $blue;
+      }
+
+      &:active, &:focus, &:visited {
+        background: $blue;
+        outline: none;
+        border-color: none;
+      }
+    }
+  }
+}

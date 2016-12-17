@@ -22,4 +22,7 @@ export class DashboardComponent {
   viewProjects() {
     this.router.navigate(["/projects"]);
   }
+  goImages() {
+  	this.router.navigate(["/images"]);
+  }
 }
