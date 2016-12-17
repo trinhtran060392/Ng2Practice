@@ -23,11 +23,13 @@
         </div>
         <div>
           <div class="btn-group">
-            <button type="button" class="btn btn-default" uib-btn="'left'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/templates/dublicate-template/dublicate-template.html')">
+            <button type="button" class="btn btn-default" uib-btn="'left'" data-toggle="modal"
+              data-target="#dub-temp">
               <i class="glyphicon glyphicon-book"></i>
             &nbsp;Dublicate
             </button>
-            <button type="button" class="btn btn-default" uib-btn="'right'" ng-controller="ModalController as modal" ng-click="modal.open('', 'app/templates/delete-template/delete-template.html')">
+            <button type="button" class="btn btn-default" uib-btn="'right'" data-toggle="modal"
+              data-target="#del-temp">
               <i class="glyphicon glyphicon-trash"></i>
             &nbsp;Delete
             </button>
@@ -36,7 +38,7 @@
       </div>
     </div>
     <div>
-      <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#create-task">
         <i class="glyphicon glyphicon-plus"></i>
         &nbsp;Create Task
       </button>
@@ -94,7 +96,7 @@
                   20/11
                 </div>
                 <div>
-                  <button type="button" class="btn btn-default">
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#create-task">
                     <i class="glyphicon glyphicon-plus"></i>
                     &nbsp;Create Task
                   </button>
@@ -104,6 +106,45 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="create-task" class="modal fade create-task-form" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="create-task-title">Create Task</div>
+        </div>
+        <div class="modal-body">
+          <div class="create-task-content flex flex-content-around flex-align-items-start">
+            <div>
+              <label>Select Images Asset</label>
+              <select class="form-control">
+                <option ng-repeat="image in create.images">Image Name</option>
+              </select>
+            </div>
+            <div>
+              <label>Select Meta</label>
+              <select class="form-control">
+                <option value="Invoice">Invoice</option>
+                <option value="Invoice">Invoice</option>
+                <option value="Invoice">Invoice</option>
+              </select>
+            </div>
+          </div>
+          <div class="check">
+            <div>
+              <md-checkbox>Start this Task now</md-checkbox>
+            </div>
+            <div>
+              <button class="btn btn-primary">Create Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
