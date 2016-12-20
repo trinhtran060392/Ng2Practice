@@ -9,11 +9,14 @@ import { LayoutModule } from '../layout/layout.module';
 import { TemplateRouting } from './template.routing';
 
 import { TemplateComponent } from './template.component';
-
+import { CreateTaskDialogComponent } from './create-task-dialog.component';
 
 @NgModule({
   declarations: [
-    TemplateComponent
+    TemplateComponent, CreateTaskDialogComponent
+  ],
+  entryComponents: [
+    TemplateComponent, CreateTaskDialogComponent
   ],
   imports: [
     CommonModule,

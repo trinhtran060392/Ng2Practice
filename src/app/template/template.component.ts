@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { MdCheckbox } from "@angular/material";
+import { MdCheckbox, MdDialog, MdDialogRef } from "@angular/material";
 import { TemplateService } from './template.service';
 import { AuthenticationService } from '../auth/auth.service';
+import { CreateTaskDialogComponent } from './create-task-dialog.component';
 
 @Component({
   templateUrl: './template.component.html',
@@ -10,8 +11,10 @@ import { AuthenticationService } from '../auth/auth.service';
 })
 
 export class TemplateComponent {
+    
+  dialogRef: MdDialogRef<CreateTaskDialogComponent>;
 
-  constructor(private service : TemplateService, private authService : AuthenticationService) {
+  constructor(private service : TemplateService, private authService : AuthenticationService, public dialog: MdDialog) {
 
   }
   projects: any[];
@@ -20,5 +23,15 @@ export class TemplateComponent {
     //this.service.getProjects(localStorage.getItem("user")).subscribe(res => {
       //console.log(res);
     //});
+  }
+  openDialog() {
+    this.dialogRef = this.dialog.open(CreateTaskDialogComponent, {
+      disableClose: false
+    });
+
+    this.dialogRef.afterClosed().subscribe(result => {
+      console.log('result: ' + result);
+      this.dialogRef = null;
+    });
   }
 }
